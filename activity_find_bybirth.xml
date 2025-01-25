@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.FindBYBirth">
+
+    <TextView
+        android:id="@+id/TvDate1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+
+        android:text="Your Birth Date and Month"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/datePiker"
+        app:layout_constraintStart_toStartOf="@id/datePiker"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TvDate2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:datePickerMode="spinner"
+        android:gravity="center"
+        android:text="Your partner's Birth Date and Month"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/datePiker2"
+        app:layout_constraintStart_toStartOf="@id/datePiker2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <DatePicker
+        android:id="@+id/datePiker"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:calendarTextColor="@color/white"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:paddingStart="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/datePiker2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TvDate1" />
+
+    <DatePicker
+        android:id="@+id/datePiker2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:paddingStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/datePiker"
+        app:layout_constraintTop_toBottomOf="@id/TvDate2" />
+
+    <ImageView
+        android:id="@+id/imgcland1"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@id/datePiker"
+        app:layout_constraintStart_toStartOf="@id/datePiker"
+        app:layout_constraintTop_toBottomOf="@id/datePiker" />
+
+    <ImageView
+        android:id="@+id/imgcland2"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@id/datePiker2"
+        app:layout_constraintStart_toStartOf="@id/datePiker2"
+        app:layout_constraintTop_toBottomOf="@id/datePiker2" />
+
+    <TextView
+        android:id="@+id/tvwithimg1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@id/datePiker"
+        app:layout_constraintStart_toStartOf="@id/datePiker"
+        app:layout_constraintTop_toBottomOf="@id/imgcland1" />
+
+    <TextView
+        android:id="@+id/tvwithimg2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@id/datePiker2"
+        app:layout_constraintStart_toStartOf="@id/datePiker2"
+        app:layout_constraintTop_toBottomOf="@id/imgcland2" />
+
+    <TextView
+        android:id="@+id/tvvs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="VS"
+        android:textColor="#E60A0A"
+        app:layout_constraintEnd_toStartOf="@id/tvwithimg2"
+        app:layout_constraintStart_toEndOf="@id/imgcland1"
+        app:layout_constraintTop_toBottomOf="@id/imgcland1" />
+
+    <TextView
+        android:id="@+id/tvpercentage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#19C320"
+        app:layout_constraintEnd_toEndOf="@id/tvwithimg2"
+        app:layout_constraintStart_toStartOf="@id/imgcland1"
+        app:layout_constraintTop_toBottomOf="@id/tvvs" />
+
+    <Button
+        android:id="@+id/BtncomB"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="COMPARE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/datePiker2"
+        app:layout_constraintStart_toStartOf="@id/datePiker" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

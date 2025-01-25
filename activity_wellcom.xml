@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgr"
+    tools:context=".activities.WellcomActivity">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/download"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/find" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/find"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_baseline_event_note_24"
+        app:drawableTint="#21069C"
+        android:text="Find by Birthday"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/findstar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/findstar"
+        style="@style/CardView.Dark"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_baseline_stars_24"
+        app:drawableTint="#3F22C3"
+        android:text="Find  by  Star"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/find"
+        app:layout_constraintTop_toTopOf="@+id/find" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/rateus"
+        style="@style/CardView.Dark"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_baseline_star_rate_24"
+        app:drawableTint="#F64108"
+        android:text="Rate US"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/findmore"
+        app:layout_constraintTop_toBottomOf="@id/find"  />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/findmore"
+        style="@style/CardView.Dark"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:drawableTop="@drawable/ic_twotone_apps_24"
+        app:drawableTint="#4C0C1A"
+        android:text="More App"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/findstar"
+        app:layout_constraintStart_toEndOf="@id/rateus"
+        app:layout_constraintTop_toBottomOf="@id/findstar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

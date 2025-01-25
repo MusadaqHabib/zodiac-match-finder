@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.FindBYStar">
+    <TextView
+        android:id="@+id/Tvstar1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Select your Star"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/Tvstar2"
+        android:paddingStart="20dp"
+    />
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:datePickerMode="spinner"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:text="Select Your partner's Star"
+        android:gravity="center"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/Tvstar1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Tvstar1"
+        android:id="@+id/Tvstar2"
+        />
+    <Spinner
+        android:id="@+id/spstar1"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/Tvstar1"
+        app:layout_constraintEnd_toStartOf="@+id/Tvstar2"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+    <Spinner
+        android:id="@+id/spstar2"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/Tvstar2"
+        app:layout_constraintStart_toEndOf="@id/spstar1"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imgstar1"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@id/spstar1"
+        app:layout_constraintStart_toStartOf="@id/spstar1"
+        app:layout_constraintTop_toBottomOf="@id/spstar1" />
+
+    <ImageView
+        android:id="@+id/imgStar2"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@id/spstar2"
+        app:layout_constraintStart_toStartOf="@id/spstar2"
+        app:layout_constraintTop_toBottomOf="@id/spstar2" />
+
+    <TextView
+        android:id="@+id/tvwithImgStar1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@id/spstar1"
+        app:layout_constraintStart_toStartOf="@id/spstar1"
+        app:layout_constraintTop_toBottomOf="@id/imgstar1" />
+
+    <TextView
+        android:id="@+id/tvwithImgStar2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+
+        app:layout_constraintEnd_toEndOf="@id/spstar2"
+        app:layout_constraintStart_toStartOf="@id/spstar2"
+        app:layout_constraintTop_toBottomOf="@id/imgStar2" />
+
+    <TextView
+        android:id="@+id/tvvsSTR"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="VS"
+        android:textColor="#E60A0A"
+        app:layout_constraintEnd_toStartOf="@id/spstar2"
+        app:layout_constraintStart_toEndOf="@id/spstar1"
+        app:layout_constraintTop_toBottomOf="@id/imgstar1" />
+
+    <TextView
+        android:id="@+id/tvpercentageSTAR"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#19C320"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@id/tvwithImgStar2"
+        app:layout_constraintStart_toStartOf="@id/tvwithImgStar1"
+        app:layout_constraintTop_toBottomOf="@id/tvvsSTR" />
+
+
+    <Button
+        android:id="@+id/BtnComStar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="COMPARE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/spstar2"
+        app:layout_constraintStart_toStartOf="@id/spstar1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
